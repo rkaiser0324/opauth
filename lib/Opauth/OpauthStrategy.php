@@ -83,7 +83,9 @@ class OpauthStrategy {
 		 */
 		$this->strategy['path_to_strategy'] = $this->env['path'].$this->strategy['strategy_url_name'].'/';
 		$this->strategy['complete_url_to_strategy'] = $this->env['host'].$this->strategy['path_to_strategy'];
-		
+                
+                // Set scope=email here
+                $this->strategy['scope'] = 'email';		
 
 		$dictionary = array_merge($this->env, $this->strategy);
 		foreach ($this->strategy as $key=>$value) {
