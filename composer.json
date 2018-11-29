@@ -1,5 +1,5 @@
 {
-	"name": "opauth/opauth",
+	"name": "rkaiser0324/opauth",
 	"description": "Multi-provider authentication framework for PHP",
 	"type": "library",
 	"keywords": ["authentication","auth","oauth","openid","omniauth","facebook","google","twitter"],
@@ -12,17 +12,32 @@
 			"homepage": "http://uzyn.com"
 		}
 	],
+	"config": {
+        "preferred-install": "source"
+    },
 	"require": {
-		"php": ">=5.2.0"
-	},
-	"suggest": {
-		"opauth/facebook": "Allows Facebook authentication",
-		"opauth/google": "Allows Google authentication",
-		"opauth/twitter": "Allows Twitter authentication"
+		"php": ">=5.2.0",
+		"rkaiser0324/facebook": "dev-master",
+		"rkaiser0324/google": "dev-master",
+		"rkaiser0324/linkedin": "dev-master"
 	},
 	"autoload": {
-		"classmap": [ 
+		"classmap": [
 			"lib/Opauth/"
 		]
-	}
+	},
+	"repositories": [
+		{
+		    "url": "https://github.com/rkaiser0324/facebook.git",
+		    "type": "git"
+		},
+		{
+		    "url": "https://github.com/rkaiser0324/google.git",
+		    "type": "git"
+		},
+		{
+		    "url": "https://github.com/rkaiser0324/linkedin.git",
+		    "type": "git"
+		}
+	]
 }
